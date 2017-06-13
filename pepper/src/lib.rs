@@ -3,9 +3,6 @@ extern crate tokio_core;
 extern crate route_recognizer;
 //extern crate url;
 extern crate hyper;
-extern crate serde;
-extern crate serde_json;
-extern crate tk_listen;
 
 use std::net::SocketAddr;
 use futures::{Stream, Future};
@@ -51,8 +48,6 @@ impl Server {
 
 
     pub fn run(self, addr: &SocketAddr) {
-        //let handle = &self.handle();
-        //let listener = TcpListener::bind(addr, &handle).unwrap();
         let arc_self = std::sync::Arc::new(self);
         let server = Http::new()
             .bind(addr, move || Ok(arc_self.clone()))
