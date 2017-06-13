@@ -1,0 +1,17 @@
+[package]
+authors = ["Tavy <sabit@sabit.space>"]
+name = "pepper"
+version = "0.1.0"
+
+[dependencies]
+futures = "0.1.13"
+route-recognizer = "0.1.11"
+serde = "0.9.13"
+serde_json = "0.9.10"
+tk-http = "0.2.1"
+tk-listen = "0.1.0"
+tokio-core = "0.1.6"
+
+[dependencies.hyper]
+git = "https://github.com/hyperium/hyper"
+optional = false
